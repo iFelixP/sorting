@@ -52,8 +52,56 @@ public class Main {
         };
 
         // Ordenar los alumnos por lastName y firstName e imprimir
+        System.out.println();
+        sort(alumnos,new LastNameAscendantComparator());
+        for(int i = 0; i < alumnos.length; i++){
+            System.out.print("[" + alumnos[i].getLastName() + "]");
+        }
+
+        System.out.println();
+        sort(alumnos,new LastNameDescendantComparator());
+        for(int i = 0; i < alumnos.length; i++){
+            System.out.print("[" + alumnos[i].getLastName() + "]");
+        }
+
+        System.out.println();
+        sort(alumnos,new FirstNameAscendantComparator());
+        for(int i = 0; i < alumnos.length; i++){
+            System.out.print("[" + alumnos[i].getFirstName() + "]");
+        }
+
+        System.out.println();
+        sort(alumnos,new FirstNameDescendantComparator());
+        for(int i = 0; i < alumnos.length; i++){
+            System.out.print("[" + alumnos[i].getFirstName() + "]");
+        }
 
         // Ordenar por mes de nacimiento y por clave e imprimir
+
+        System.out.println();
+        sort(alumnos,new DateMonthAscendantComparator());
+        for(int i = 0; i < alumnos.length; i++){
+            System.out.print("[" + alumnos[i].getBirthday().getMonth() + "]");
+        }
+
+        System.out.println();
+        sort(alumnos,new DateMonthDescendantComparator());
+        for(int i = 0; i < alumnos.length; i++){
+            System.out.print("[" + alumnos[i].getBirthday().getMonth() + "]");
+        }
+
+        System.out.println();
+        sort(alumnos,new ClaveAscendantComparator());
+        for(int i = 0; i < alumnos.length; i++){
+            System.out.print("[" + alumnos[i].getClave() + "]");
+        }
+
+        System.out.println();
+        sort(alumnos,new ClaveDescendantComparator());
+        for(int i = 0; i < alumnos.length; i++){
+            System.out.print("[" + alumnos[i].getClave() + "]");
+        }
+
     }
 
     private static void sort(Object[] datos, Comparator comparator) {
